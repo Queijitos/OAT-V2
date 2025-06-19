@@ -1,0 +1,16 @@
+.navbar{
+    list-style: none;
+    display: flex;
+    background-color: black;
+    color: rgb(207, 205, 205);
+}
+ul{
+    position: relative;
+    left: 30%;
+    cursor: pointer;
+    transition: 0.5;
+}
+ul:hover{
+    transition: 0.5s;
+    color: white;
+}

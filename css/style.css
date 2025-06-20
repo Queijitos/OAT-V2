@@ -1,34 +1,314 @@
-body{
-    background: black;
+@import 'variables.css';
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.navbar{
-    width: 28%;
-    align-items: center;
-    list-style: none;
+body {
+    background-color: var(--background-dark);
+    color: var(--texto-light);
+    height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-tittle);
+}
+
+li,
+p,
+span {
+    font-family: var(--font-text);
+}
+
+#cabecalho {
+    width: 100%;
+    height: 10%;
     display: flex;
-    color: rgb(207, 205, 205);
-    margin-left: 35%;
-    padding: 0%;
-    border: 2px solid transparent;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar {
+    border: 2px solid;
     border-image: linear-gradient(to right, rgb(243, 72, 72), rgb(32, 117, 253));
     border-image-slice: 1;
-    border-radius: 15px;
+    border-radius: 50px;
+    padding: 10px;
 }
-ul{
-    position: relative;
-   
 
-    cursor: pointer;
-    transition: 0.5;
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 5px;
 }
-ul:hover{
+
+ul:hover {
     transition: 0.5s;
     color: white;
 }
-.logo{
-    position: absolute;
-    left: 5%;
+
+.logo {
     width: 100px;
     height: 50px;
+}
+
+.slogan {
+    font-style: italic;
+    font-family: var(--font-text);
+    font-size: 12px;
+}
+
+main {
+    height: 80%;
+    width: 100%;
+}
+
+#dobra-1-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#dobra-2-line {
+    display: flex;
+    justify-content: center;
+}
+
+#dobra-3-sobre {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dobra-3-sobre .titulo {
+    font-size: 40px;
+    text-align: center;
+}
+
+.box {
+    padding-top: 30px;
+    width: 75%;
+    text-align: justify;
+}
+
+.box p, ul {
+    margin-top: 15px;
+    list-style: none;  
+}
+
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 auto;
+  padding: 2%;
+  width: 280px;
+  border-radius: .75rem;
+  background-size: cover;
+  cursor: pointer;
+  height: auto;
+  border-radius: 2rem;
+  display: flex;
+  align-items: self-start;
+  justify-content: right;
+  text-align: right;
+  transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+
+}
+
+.card>.row {
+  overflow-x: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer e Edge antigo */
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+
+.card>.row>.description {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+
+.row,
+.row * {
+  box-sizing: border-box;
+}
+
+.description p {
+  color: #b0b0ba;
+  padding-top: 5px;
+}
+
+.description h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #FFC20E;
+}
+
+input {
+  display: none;
+}
+
+input:checked+label {
+  width: clamp(300px, 35vw, 600px);
+}
+
+input:checked+label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  overflow-y: hidden;
+}
+
+
+input[type="radio"]:checked+label.card {
+  height: auto;
+
+}
+
+.card[for="c1"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #0096D6;
+}
+
+.card[for="c2"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #0084C4;
+}
+
+.card[for="c3"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #0072B2;
+}
+
+.card[for="c4"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #0060A0;
+}
+
+.card[for="c5"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #004E8E;
+}
+
+.card[for="c6"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #003C7C;
+}
+
+.card[for="c7"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #002A6A;
+}
+
+.card[for="c8"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #001858;
+}
+
+.card[for="c9"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #000646;
+}
+
+.card[for="c10"] {
+  background-image: url('Group\ 125.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: #043352;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-controls button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #043352;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background-color: #06517a;
 }

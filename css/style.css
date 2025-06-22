@@ -34,8 +34,19 @@ span {
     justify-content: space-around;
     align-items: center;
 }
-
+.texto{
+  padding: 10vh;
+  margin: 10vh;
+}
+.eclipse{
+  position: absolute;
+  left: 170vh;
+  transform: scale(1.6);
+  
+}
 .navbar {
+  position: relative;
+  left: 10vh;
     border: 2px solid;
     border-image: linear-gradient(to right, rgb(243, 72, 72), rgb(32, 117, 253));
     border-image-slice: 1;
@@ -311,4 +322,14 @@ input[type="radio"]:checked+label.card {
 
 .carousel-controls button:hover {
   background-color: #06517a;
+}
+.modificacao{
+  list-style: none;
+  display: flex;
+  margin: 10px;
+}
+.dobra-5-line {
+    display: flex;
+    margin: 10vh;
+    justify-content: center;
 }

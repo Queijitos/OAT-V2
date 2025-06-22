@@ -1,3 +1,13 @@
+@media (min-width: 1025px) {
+    .minha-classe {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 600px) {
+    .minha-classe {
+      font-size: 14px;
+    }
+  }
 body{
     background: black;
 }
@@ -17,8 +27,6 @@ body{
 }
 ul{
     position: relative;
-   
-
     cursor: pointer;
     transition: 0.5;
 }
@@ -32,3 +40,51 @@ ul:hover{
     width: 100px;
     height: 50px;
 }
+.gif{
+    position: relative;
+    left: 90vh;
+    top: 30vh;
+}
+.frase1, p{
+    color: white;
+    position: relative;
+    left: 65%;
+    bottom: 7vh;
+    width: 52vh;
+    display: flex;
+    flex: wrap;
+}
+.hr-gradient {
+    height: 2px; 
+    width: 50%; 
+    position: relative;
+    top: 65vh;
+    left: 58vh;
+    background: linear-gradient(to right, red, blue);
+    border: none;
+    margin: 20px 0;
+  }
+  .quem-somos, p{
+    color: white;
+    box-sizing: content-box;
+    width: 50%;
+    position: relative;
+    left: 58vh;
+    top: 65vh;
+    display: flex;
+    flex: wrap;
+  }
+  .quem-somos, h1{
+    color: white;
+    box-sizing: content-box;
+    width: 15%;
+    height: 30px;
+    position: relative;
+    left: 100vh;
+    top: 65vh;
+    font-size: xxx-large;
+    display: flex;
+    flex: wrap;
+  }
+  
+  
